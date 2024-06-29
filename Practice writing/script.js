@@ -1,17 +1,17 @@
 const words = ["apple", "banana", "strawberries"];
 
 const correctPronunciation = {
-    "apple": "/recordingfruit/apple.mp3",
-    "banana": "/recordingfruit/banana.mp3",
-    "strawberries": "/recordingfruit/strawberries.mp3"
+    "apple": "/Millie-s-learning-space/recordingfruit/apple.mp3",
+    "banana": "/Millie-s-learning-space/recordingfruit/banana.mp3",
+    "strawberries": "/Millie-s-learning-space/recordingfruit/strawberries.mp3"
 };
 
-const retryAudio = "/retry.mp3"; // Audio file for retry message
+const retryAudio = "/Millie-s-learning-space/retry.mp3"; // Audio file for retry message
 
 const fruitImages = {
-    "apple": "/images/apple.png",
-    "banana": "/images/banana.png",
-    "strawberries": "/images/strawberry.png"
+    "apple": "/Millie-s-learning-space/images/apple.png",
+    "banana": "/Millie-s-learning-space/images/banana.png",
+    "strawberries": "/Millie-s-learning-space/images/strawberry.png"
 };
 
 const translations = {
@@ -89,7 +89,7 @@ function checkPronunciation(userInput) {
 
     if (distance <= threshold) {
         console.log("Pronunciation correct, playing positive feedback.");
-        playAudioFeedback('/positiveFeedback.mp3');
+        playAudioFeedback('/Millie-s-learning-space/positiveFeedback.mp3');
         document.getElementById("nextWordButton").disabled = false;
     } else {
         console.log("Pronunciation incorrect, playing retry feedback.");
