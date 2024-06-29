@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation Practice</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/Millie-s-learning-space/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Lecție de pronunție și scriere </h1>
+    </header>
+    <main>
+        <section id="pronunciation">
+            <h2>Pronuntă cuvantul</h2>
+            <div id="word-container">
+                <p id="wordToPronounce">apple</p>
+                <img id="fruitImage" src="/Millie-s-learning-space/images/apple.png" alt="Apple" onclick="playCorrectPronunciation()">
+                <p id="translation">măr</p>
+            </div>
+            <div class="arrow-container">
+                <p>Click pe imagine pentru a auzi pronunția</p>
+            </div>
+            <div class="buttons">
+                <button onclick="startRecognition()">Începe să vorbești</button>
+                <button onclick="showWritingPractice()">Exersează scrierea</button>
+                <p id="userInput"></p>
+                <p id="feedback"></p>
+            </div>
+        </section>
+        
+        <!-- Practice Writing Section -->
+        <section id="writing-practice" style="display: none;">
+            <h2>Exersează scrierea</h2>
+            <p>Scrie cuvântul pe care l-ai auzit:</p>
+            <button onclick="replayWord()">Ascultă din nou</button>
+            <input type="text" id="writingInput" placeholder="Scrie cuvântul aici..." autocomplete="off">
+            <button onclick="checkWriting()">Verifică scrierea</button>
+            <p id="writingFeedback"></p>
+            <button id="nextWordButton" onclick="nextWord()" disabled>Următorul cuvânt
+            <button onclick="hideWritingPractice()">Înapoi la pronunție</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Pentru Millie cu dragoste, mamica ta!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
